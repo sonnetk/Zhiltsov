@@ -1,0 +1,158 @@
+@font-face {
+    font-weight: 400;
+    font-family: "SuisseIntl-Regular";
+    src: url("fonts/Suisse Intl/SuisseIntl-Regular.otf");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: "SuisseIntl-SemiBold";
+    src: url("fonts/Suisse Intl/SuisseIntl-SemiBold.otf");
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: "SuisseIntl-Light";
+    src: url("fonts/Suisse Intl/SuisseIntl-Light.otf");
+}
+
+body{
+    background-color: #F1F1F1;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "SuisseIntl-Regular", serif;
+    text-transform: uppercase;
+}
+
+b{
+    font-family: "SuisseIntl-SemiBold", serif;
+}
+
+span{
+    text-transform: uppercase;
+    font-family: "SuisseIntl-Light", serif;
+    color: white;
+}
+
+/*header*/
+
+header{
+    position: sticky;
+    top: 0;
+    border-bottom: solid #cecece 1px;
+    padding: 28px 40px 28px 40px;
+    background-color: #F1F1F1;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+li{
+    width: 25%;
+    list-style-type: none;
+}
+
+li:nth-child(3), li:nth-child(4){
+    text-align: end;
+}
+
+header > a{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*main*/
+
+main{
+    margin-top: 47px;
+    padding: 0 40px;
+    z-index: -1;
+}
+
+.back{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+/*.back img:first-child {
+    width: 50%;
+    padding-bottom: 73px;
+}*/
+
+.back img:last-child {
+    width: 25%;
+}
+
+.pic{
+    margin-bottom: 73px;
+    background: url(img/pic1.svg) no-repeat;
+    background-size: 100%;
+    padding: 40px 0 40px 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pic img{
+    max-width: 40px;
+}
+.pic span{
+    margin: 50% 0 33%;
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    padding: 36px 0;
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 2vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+    white-space: nowrap;
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.marquee__content {
+    padding: 0 4vw;
+}
+
+.marquee .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
