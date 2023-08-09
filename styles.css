@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-weight: 300;
+    font-weight: 200;
     font-family: "SuisseIntl-Light";
     src: url("fonts/Suisse Intl/SuisseIntl-Light.otf");
 }
@@ -32,10 +32,9 @@ b{
     font-family: "SuisseIntl-SemiBold", serif;
 }
 
-span{
+span, h1{
     text-transform: uppercase;
     font-family: "SuisseIntl-Light", serif;
-    color: white;
 }
 
 /*header*/
@@ -60,6 +59,7 @@ ul{
 li{
     width: 25%;
     list-style-type: none;
+    font-size: 16px;
 }
 
 li:nth-child(3), li:nth-child(4){
@@ -88,28 +88,67 @@ main{
     align-items: end;
 }
 
-.back img:first-child {
+.left{
     width: 50%;
-    padding-bottom: 73px;
+    margin-bottom: 73px;
 }
 
-.back img:last-child {
-    width: 25%;
-}
-
-.front{
-    position: relative;
-    z-index: 2;
-}
-
-.pic{
+.pic1 {
+    background: url(img/pic1.svg) no-repeat;
+    background-size: 100%;
     padding: 40px 0 40px 40px;
     display: flex;
     flex-direction: column;
+    font-size: 18px;
 }
 
-.pic img{
+.pic1 img{
     max-width: 40px;
+}
+
+.pic1 span{
+    margin: 42.3% 0 30.3%;
+    color: white;
+}
+
+.right{
+    width: 50%;
+    display: flex;
+}
+
+.right > div {
+    width: 50%;
+}
+
+.right__first{
+    display: flex;
+    align-items: end;
+    padding-left: 12px;
+    padding-bottom: 73px;
+}
+
+.right__first a{
+    font-size: 14px;
+}
+
+.right__second{
+    height: 100%;
+}
+
+.right__second span{
+    font-size: 32px;
+}
+
+.pic2 {
+    background: url(img/pic2.svg) no-repeat;
+    background-size: 100%;
+    margin-top: 60%;
+    height: 54%;
+    padding-bottom: 96%;
+}
+
+.pic2 button{
+
 }
 
 /*footer*/
@@ -117,6 +156,7 @@ main{
 footer{
     background-color: black;
     padding: 36px 0;
+    color: white;
 }
 
 .marquee {
