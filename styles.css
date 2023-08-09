@@ -88,30 +88,28 @@ main{
     align-items: end;
 }
 
-/*.back img:first-child {
+.back img:first-child {
     width: 50%;
     padding-bottom: 73px;
-}*/
+}
 
 .back img:last-child {
     width: 25%;
 }
 
+.front{
+    position: relative;
+    z-index: 2;
+}
+
 .pic{
-    margin-bottom: 73px;
-    background: url(img/pic1.svg) no-repeat;
-    background-size: 100%;
     padding: 40px 0 40px 40px;
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .pic img{
     max-width: 40px;
-}
-.pic span{
-    margin: 50% 0 33%;
 }
 
 /*footer*/
