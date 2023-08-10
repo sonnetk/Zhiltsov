@@ -16,6 +16,12 @@
     src: url("fonts/Suisse Intl/SuisseIntl-Light.otf");
 }
 
+@font-face {
+    font-weight: 800;
+    font-family: "Angst";
+    src: url("fonts/Angst/static/Angst-Bold.otf");
+}
+
 body{
     background-color: #F1F1F1;
     margin: 0;
@@ -32,15 +38,17 @@ b{
     font-family: "SuisseIntl-SemiBold", serif;
 }
 
-span, h1{
+span{
     text-transform: uppercase;
     font-family: "SuisseIntl-Light", serif;
+    font-size: clamp(10px, 1px + 2vw, 18px);
 }
 
 /*header*/
 
 header{
     position: sticky;
+    z-index: 2;
     top: 0;
     border-bottom: solid #cecece 1px;
     padding: 28px 40px 28px 40px;
@@ -59,7 +67,7 @@ ul{
 li{
     width: 25%;
     list-style-type: none;
-    font-size: 16px;
+    font-size: clamp(8px, 1px + 2vw, 16px)
 }
 
 li:nth-child(3), li:nth-child(4){
@@ -72,6 +80,10 @@ header > a{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+header img{
+    width: clamp(20px, 30px + 3vw, 77px);
 }
 
 /*main*/
@@ -93,13 +105,17 @@ main{
     margin-bottom: 73px;
 }
 
+.pic1 img{
+    width: clamp(10px, 10px + 3vw, 40px);
+}
+
 .pic1 {
     background: url(img/pic1.svg) no-repeat;
     background-size: 100%;
-    padding: 40px 0 40px 40px;
+    padding: 6% 0 6% 6%;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    font-size: clamp(10px, 1px + 2vw, 18px);
 }
 
 .pic1 img{
@@ -128,15 +144,18 @@ main{
 }
 
 .right__first a{
-    font-size: 14px;
+    font-size: clamp(8px, 4px + 1vw, 14px);
 }
+
 
 .right__second{
     height: 100%;
 }
 
 .right__second span{
-    font-size: 32px;
+    font-size: clamp(12px, 1px + 3vw, 32px);
+    line-height: clamp(12px, 1px + 3vw, 32px);
+    white-space: nowrap;
 }
 
 .pic2 {
@@ -144,11 +163,35 @@ main{
     background-size: 100%;
     margin-top: 60%;
     height: 54%;
-    padding-bottom: 96%;
+    padding-bottom: 78%;
+    display: flex;
+    justify-content: end;
 }
 
 .pic2 button{
+    border: 0;
+    border-radius: 28px;
+    background-color: #EB1D1D;
+    color: white;
+    font-size: clamp(0px, 1px + 1vw, 18px);
+    width: clamp(12px, 1px + 4vw, 56px);
+    height: clamp(12px, 1px + 4vw, 56px);
+    margin: 8% 8% 0 0;
+}
 
+.front{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    margin-left: 20px;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: "Angst", serif;
+    font-size: clamp(20px, 1px + 9vw, 138px);
+    line-height: clamp(16px, 1px + 9vw, 120px);
+    margin: 0;
 }
 
 /*footer*/
